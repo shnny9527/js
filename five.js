@@ -90,9 +90,9 @@ sava.addEventListener('click', function (e) {
     obj.imgUrl = ticketImg.value
     obj.area = ticketArea.value
     obj.description = ticketDescribe.value
-    obj.price = ticketPrice.value
-    obj.group = ticketNum.value
-    obj.rate = ticketStar.value
+    obj.price = parseInt(ticketPrice.value)
+    obj.group = parseInt(ticketNum.value)
+    obj.rate = parseInt(ticketStar.value)
     data.push(obj)
     init()
 
@@ -114,9 +114,9 @@ sava.addEventListener('click', function (e) {
     } else if (ticketDescribe.value === '') {
         alert('請填寫正確套票描述')
     }
+    const form = document.querySelector('form')
+    form.reset()
 })
-
-
 
 
 
